@@ -1,65 +1,54 @@
-
 //breakpoints
 @mixin breakpoint($class) {
   @if $class == xs {
-    @media (max-width: 767px) { @content; }
-  }
- 
-  @else if $class == sm {
-    @media (min-width: 768px) { @content; }
-  }
- 
-  @else if $class == md {
-    @media (min-width: 992px) { @content; }
-  }
- 
-  @else if $class == lg {
-    @media (max-width: 1200px) { @content; }
-  }
- 
-  @else if $class == ss {
-
-  @media (max-width: 1364px) { @content; }
+    @media (max-width: 767px) {
+      @content;
     }
-
-  @else {
+  } @else if $class == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $class == ss {
+    @media (max-width: 1364px) {
+      @content;
+    }
+  } @else {
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
 
-
-@mixin position-property($value,
-$top,
-$left) {
+@mixin position-property($value, $top, $left) {
   position: $value;
   top: $top;
   left: $left;
 }
 
-@mixin position-property-right($value,
-$top,
-$right) {
+@mixin position-property-right($value, $top, $right) {
   position: $value;
   top: $top;
   right: $right;
 }
 
-@mixin font-property($family,
-$size,
-$weight,
-$style) {
+@mixin font-property($family, $size, $weight, $style) {
   font: {
-      family: $family;
-      size: $size;
-      weight: $weight;
-      style: $style;
+    family: $family;
+    size: $size;
+    weight: $weight;
+    style: $style;
   }
 }
 
-@mixin line-height ($size) {
+@mixin line-height($size) {
   line-height: $size;
 }
-
 
 @mixin border-radius($size) {
   border-radius: $size;

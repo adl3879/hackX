@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch sass/main.scss -o css",
     "build": "npm run scss"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bamiogunfemi/hackX.git"
